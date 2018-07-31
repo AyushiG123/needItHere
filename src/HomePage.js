@@ -3,8 +3,8 @@ import React, {Component} from 'react'
 class HomePage extends Component{
     render(){
         return(
-            <div className = "Home">
-              <h1>
+            <div className = "Home" style={styles.home}>
+              <h1 style={styles.h1}>
                 #NEED
               </h1>
               <h2> 
@@ -13,6 +13,23 @@ class HomePage extends Component{
             </div>
         )
     }
+}
+
+const styles = {
+  home:{
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  },
+
+  h1:{
+    fontFamily: "'Cabin Sketch', cursive",
+    fontSize: '70px'
+  },
+
+  h2:{
+
+  }
 }
 
 export default HomePage
