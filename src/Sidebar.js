@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import Contents from './Contents'
+
 class Sidebar extends Component{
     render(){
         return(
@@ -7,7 +9,7 @@ class Sidebar extends Component{
                 <h1 style={styles.h1}>
                     Know more...
                 </h1>
-                
+                <Contents />
             </div>
         )
     }
