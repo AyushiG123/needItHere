@@ -22,7 +22,9 @@ const styles={
     width: '15rem',
     padding: '1rem 0',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    alignItems:'stretch',
+    height:'100vh'
     },
     
     h1:{

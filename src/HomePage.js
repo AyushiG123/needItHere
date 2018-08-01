@@ -17,9 +17,9 @@ class HomePage extends Component{
 
 const styles = {
   home:{
-  flex: 1,
-  display: 'flex',
-  flexDirection: 'column',
+   flex: 1,
+   display: 'flex',
+   flexDirection: 'column',
   },
 
   h1:{
