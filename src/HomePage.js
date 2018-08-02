@@ -7,7 +7,7 @@ class HomePage extends Component{
               <h1 style={styles.h1}>
                 #NEED
               </h1>
-              <h2> 
+              <h2 style={styles.h2}> 
                  Where the needs of the community make a stand
               </h2>
             </div>
@@ -20,15 +20,18 @@ const styles = {
    flex: 1,
    display: 'flex',
    flexDirection: 'column',
+   alignItems:'stretch',
+   height:'100vh'
   },
 
   h1:{
     fontFamily: "'Cabin Sketch', cursive",
-    fontSize: '70px'
+    fontSize: '70px',
+    marginLeft:'230px'
   },
 
   h2:{
-
+     marginLeft:'270px'
   }
 }
 

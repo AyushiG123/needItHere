@@ -1,17 +1,15 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 class Contents extends Component{
     render(){
         return(
             <div className ="contents">
-              <nav>
                 <ul>
-                   <li style = {styles.li} ><Link to='/'>Home</Link></li>
-                   <li style = {styles.li}><Link to='/signUp'>Sign Up or Log In</Link></li>
-                   <li style = {styles.li}><Link to='/vote'>Vote!</Link></li>
+                   <li style = {styles.li}><NavLink to="/">Home</NavLink></li>
+                   <li style = {styles.li}><NavLink to="/signUp">Sign Up or Log In</NavLink></li>
+                   <li style = {styles.li}><NavLink to="/vote">Vote!</NavLink></li>
                 </ul>
-              </nav>
             </div>
         ) 
     }

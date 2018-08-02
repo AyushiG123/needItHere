@@ -1,12 +1,10 @@
 import React, {Component} from 'react'
 
-import Sidebar from './Sidebar'
-
-class VotePage extends Component{
+class SignUp extends Component{
     render(){
         return(
-            <div className="votePage" style = {styles}>
-                Voting!!
+            <div className="signUp" style = {styles}>
+                Signing In!!!
             </div>
         )
     }
@@ -20,4 +18,4 @@ const styles={
    height:'100vh'
 }
 
-export default VotePage
+export default SignUp
