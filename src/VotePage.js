@@ -1,12 +1,23 @@
 import React, {Component} from 'react'
 
-import Sidebar from './Sidebar'
-
 class VotePage extends Component{
     render(){
         return(
             <div className="votePage" style = {styles}>
-                Voting!!
+                <h1>
+                    Cast your vote....
+                </h1>
+                <div>
+                    <img src=" " alt="Bank"/>
+                    <div className='content'>
+                      <h2>
+                          Bank
+                          </h2>
+                          <p>
+                              Manage money easily with dedicated desk service and an 24 hr ATM 
+                              </p>
+                    </div>
+                </div>
             </div>
         )
     }
