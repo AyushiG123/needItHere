@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
+import GeoLocation from './GeoLocation'
 
 class VotePage extends Component{
     render(){
         return(
+           // <GeoLocation />
             <div className="votePage" style = {styles.votePage}>
+            <GeoLocation />
                 <h1>
                     Cast your vote....
                 </h1>
