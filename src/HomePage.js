@@ -19,7 +19,7 @@ class HomePage extends Component{
                 Begin Here...
                 </h2>
                 <ButtonToolbar>
-                  <Button bsStyle="info" bsSize="large">
+                  <Button>
                        <Link
                        to="/signUp">
                        Sign Up or Log In
