@@ -18,13 +18,13 @@ class HomePage extends Component{
               <h2>
                 Begin Here...
                 </h2>
-                <ButtonToolbar>
-                  <Button>
+                <ButtonToolbar> 
+                  <Button bsSize="large">
                        <Link
-                       to="/signUp">
+                       to="/signUp" style={styles.button}>
                        Sign Up or Log In
                        </Link>
-                    </Button>
+                       </Button>
                 </ButtonToolbar>
             </div>
         )
@@ -51,13 +51,10 @@ const styles = {
   },
 
   button:{
-     display:'inline-block',
-     width:'fit-content',
      fontSize:'20px',
-     border:'none',
      textDecoration:'none',
-     marginLeft:'30px',
-     color:'black'
+     color:'black',
+     backgroundColor:''
   },
 
 }
