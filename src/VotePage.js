@@ -28,6 +28,26 @@ class VotePage extends Component{
                               </p>
                     </div>
                 </div>
+                <div>
+                    <img src="http://madan.org.il/sites/default/files/archive/9016255039b9cd7-7b38-45e4-b250-8773d8fbdcb7_Classroom-2.jpg" alt="School" style={styles.image3}/>
+                    <div className='content' style={styles.content3}>
+                      <h2>
+                          School
+                          </h2>
+                          <p>
+                              Where one learns more than just academics
+                              </p>
+                    </div>
+                    <img src="https://evckmir.files.wordpress.com/2017/09/14989134_g.jpg?w=1120" alt="Shelter" style={styles.image4}/>
+                    <div className='content' style={styles.content4}>
+                      <h2>
+                          Shelter
+                          </h2>
+                          <p>
+                              A shelter for all the homeless beings
+                              </p>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -47,13 +67,13 @@ const styles={
    width:'400px',
    background: 'rgba(0, 0, 0, 0.5)',
    color: '#f1f1f1',
-   top:'327px',
+   top:'286px',
    marginLeft:'50px',
    cursor:'pointer'
  },
 
  image1:{
-    marginTop:'60px',
+    marginTop:'20px',
     width:'400px',
     marginLeft:'50px',
     cursor:'pointer'
@@ -64,18 +84,54 @@ const styles={
     width:'400px',
     background: 'rgba(0, 0, 0, 0.5)',
     color: '#f1f1f1',
-    top:'327px',
+    top:'286px',
     marginLeft:'550px',
     cursor:'pointer'
   },
 
  image2:{
      height:'300px',
+    marginTop:'20px',
+    width:'400px',
+    marginLeft:'100px',
+    cursor:'pointer'
+ },
+
+ content3:{
+    position:'absolute',
+    width:'400px',
+    background: 'rgba(0, 0, 0, 0.5)',
+    color: '#f1f1f1',
+    bottom:'0px',
+    marginLeft:'50px',
+    cursor:'pointer'
+  },
+
+ image3:{
+     height:'300px',
+    marginTop:'30px',
+    width:'400px',
+    marginLeft:'50px',
+    cursor:'pointer'
+ },
+
+ content4:{
+    position:'absolute',
+    width:'400px',
+    background: 'rgba(0, 0, 0, 0.5)',
+    color: '#f1f1f1',
+    bottom:'0px',
+    marginLeft:'550px',
+    cursor:'pointer'
+  },
+
+ image4:{
+     height:'300px',
     marginTop:'60px',
     width:'400px',
     marginLeft:'100px',
     cursor:'pointer'
- }
+ },
 
 }
 
