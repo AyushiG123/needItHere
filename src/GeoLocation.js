@@ -1,24 +1,55 @@
 import React, {Component} from 'react'
 import {geolocated} from 'react-geolocated'
+import Geocode from 'react-geocode'
 
 class GeoLocation extends Component {
-    render() {
-      return !this.props.isGeolocationAvailable
-        ? <div>Your browser does not support Geolocation</div>
-        : !this.props.isGeolocationEnabled
-          ? <div>Geolocation is not enabled</div>
-          : this.props.coords
-            ? <table>
-              <tbody>
-                <tr><td>latitude</td><td>{this.props.coords.latitude}</td></tr>
-                <tr><td>longitude</td><td>{this.props.coords.longitude}</td></tr>
-                <tr><td>altitude</td><td>{this.props.coords.altitude}</td></tr>
-                <tr><td>heading</td><td>{this.props.coords.heading}</td></tr>
-                <tr><td>speed</td><td>{this.props.coords.speed}</td></tr>
-              </tbody>
-            </table>
-            : <div>Getting the location data&hellip; </div>;
+  constructor(props)
+  {
+    super(props);
+    //Geocode.setApiKey("AIzaSyCY1CoJKHYqnxNP5PTDBQl7ZvRx1E-BwlM");
+    Geocode.enableDebug();
+    this.state = {address: '', error: false, hasCoords: false, message: '', coords: {}};
+    this.getUserLocation = this.getUserLocation.bind(this);
+  }
+    componentDidUpdate() {
+      if (!this.state.hasCoords) {
+        this.getUserLocation();
+      }
     }
+
+    render() {
+      if (this.state.error) {
+        return (
+          <span>
+            {this.state.message}
+          </span>
+        );
+      } else {
+        return (
+          <div>
+            {this.state.address}
+          </div>
+        );
+      }
+    }
+
+    getUserLocation(){
+      if (this.props.isGeolocationAvailable && this.props.isGeolocationEnabled && this.props.coords) {
+        Geocode.fromLatLng(this.props.coords.latitude, this.props.coords.longitude).then(
+          response => {
+            const address = response.results[0].formatted_address;
+            this.setState({error: false, hasCoords: true, coords: this.props.coords, address: address});
+            //console.log(address);
+          },
+          error => {
+            console.error(error)
+          });
+      } else {
+        this.setState({error: true, message: 'Location not enabled.'})
+      }
+      
+    }
+
   }
   
   export default geolocated({
